@@ -130,8 +130,15 @@ namespace AWP.Draw
                 }
             }
             else
-            {              
-                teamsPanel.Children.Add(new Label(){Text = "Wszystkie drużyny zostały wybrane",TextColor = Color.White,VerticalOptions = LayoutOptions.Center,HorizontalOptions = LayoutOptions.Center,FontSize = 50});
+            {
+                teamsPanel.Children.Add(new Label()
+                {
+                    Text = "Wszystkie drużyny zostały wybrane",
+                    TextColor = Color.White,
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                    FontSize = 50
+                });
                 grid.Children.RemoveAt(1);
             }
         }

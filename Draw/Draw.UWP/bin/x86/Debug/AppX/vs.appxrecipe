@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:34:30.303</Modified>
+      <Modified>2017-05-10T11:44:59.362</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Draw.UWP.exe">
       <PackagePath>entrypoint\Draw.UWP.exe</PackagePath>
-      <Modified>2017-05-10T11:34:29.717</Modified>
+      <Modified>2017-05-10T11:44:58.784</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -672,7 +672,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Core\Draw.UWP.exe">
       <PackagePath>Draw.UWP.exe</PackagePath>
-      <Modified>2017-05-10T11:34:30.287</Modified>
+      <Modified>2017-05-10T11:44:59.362</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
