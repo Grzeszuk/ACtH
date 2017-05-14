@@ -213,49 +213,52 @@ namespace AWP.Draw
         private void TeamClicked(object sender, EventArgs e)
         {
             var temp = (Button)sender;
-            teams.RemoveTeam((temp.Text));
-            AddTeams();
-            scrollPanel.ScrollToAsync(0, 0, false);
 
             if (group2.Children.Count < group1.Children.Count)
             {
-                group2.Children.Add(new Button(){Text = temp.Text,TextColor = Color.White,BackgroundColor = Color.Crimson});
+                group2.Children.Add(new Button() { Text = temp.Text, TextColor = Color.White, BackgroundColor = Color.Crimson });
             }
             else
             {
                 group1.Children.Add(new Button() { Text = temp.Text, TextColor = Color.White, BackgroundColor = Color.Crimson });
             }
+
+            teams.RemoveTeam((temp.Text));
+            AddTeams();
+            scrollPanel.ScrollToAsync(0, 0, false);
         }
 
         private void AddTable()
         {
 
             groupStack.HorizontalOptions = LayoutOptions.CenterAndExpand;
-            groupStack.VerticalOptions = LayoutOptions.CenterAndExpand;
+            groupStack.VerticalOptions = LayoutOptions.StartAndExpand;
 
             var Match = new StackLayout();
 
+            Match.Children.Add(new Label() { Text = "Grupa A:", TextColor = Color.White, FontSize = 24 });
+            Match.Children.Add(AddMatch(2, 5, 'a', "8:30"));
+            Match.Children.Add(AddMatch(4, 3, 'a', "8:30"));
+            Match.Children.Add(AddMatch(5, 1, 'a', "9:30"));
+            Match.Children.Add(AddMatch(3, 2, 'a', "9:30"));
+            Match.Children.Add(AddMatch(1, 4, 'a', "10:30"));
+            Match.Children.Add(AddMatch(5, 3, 'a', "10:30"));
+            Match.Children.Add(AddMatch(3, 1, 'a', "11:30"));
+            Match.Children.Add(AddMatch(2, 4, 'a', "11:30"));
+            Match.Children.Add(AddMatch(1, 2, 'a', "12:30"));
+            Match.Children.Add(AddMatch(4, 5, 'a', "12:30"));
 
-            for (var x = 0; x < 10; x++)
-            {
-                Match.Children.Add(new StackLayout()
-                {
-                    Children =
-                    {
-                        new StackLayout()
-                        {
-                            Orientation= StackOrientation.Horizontal,
-                            Children=
-                            {
-                                new Button(){Text="Drużyna 1",TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
-                                new Button(){Text="vs",TextColor=Color.DimGray,BackgroundColor=Color.White,WidthRequest=40},
-                                new Button(){Text="Drużyna 2",TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
-                            }
-                        },
-                        new Button(){Text = "Sala: 412, Dzień: 19 maja, Godzina: 12:30",TextColor=Color.White},
-                    }
-                });
-            }
+            Match.Children.Add(new Label() { Text = "Grupa B:", TextColor = Color.White, FontSize = 24 });
+            Match.Children.Add(AddMatch(2, 5, 'b', "14:00"));
+            Match.Children.Add(AddMatch(4, 3, 'b', "14:00"));
+            Match.Children.Add(AddMatch(5, 1, 'b', "15:00"));
+            Match.Children.Add(AddMatch(3, 2, 'b', "15:00"));
+            Match.Children.Add(AddMatch(1, 4, 'b', "16:00"));
+            Match.Children.Add(AddMatch(5, 3, 'b', "16:00"));
+            Match.Children.Add(AddMatch(3, 1, 'b', "17:00"));
+            Match.Children.Add(AddMatch(2, 4, 'b', "17:00"));
+            Match.Children.Add(AddMatch(1, 2, 'b', "18:00"));
+            Match.Children.Add(AddMatch(4, 5, 'b', "18:00"));
 
             var Matches = new ScrollView()
             {
@@ -274,6 +277,42 @@ namespace AWP.Draw
 
             groupStack.Children.Add(Table);
           
+        }
+
+        private StackLayout AddMatch(int team1, int team2,char group,string time)
+        {
+            var temp1 = new Button();
+            var temp2 = new Button();
+
+            if (group=='a')
+            {
+                temp1 = (Button)group1.Children[team1];
+                temp2 = (Button)group1.Children[team2];
+            }
+            else
+            {
+                temp1 = (Button)group2.Children[team1];
+                temp2 = (Button)group2.Children[team2];
+            }
+
+            return new StackLayout()
+            {
+                Children =
+                {
+                   new StackLayout()
+                        {
+                            Orientation= StackOrientation.Horizontal,
+                            Children=
+                            {
+                                new Button(){Text=temp1.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                                new Button(){Text="vs",TextColor=Color.DimGray,BackgroundColor=Color.White,WidthRequest=40},
+                                new Button(){Text=temp2.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                            }
+                        },
+                        new Button(){Text = $"Dzień: 19 maja, Godzina: {time}",TextColor=Color.White},
+                }
+
+            };          
         }
     }
 }

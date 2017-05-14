@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>67739CF9EB7232EFCAEECCF95BA6200551829E51D2C86636FEB24106D28062F1</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>46D15532C9480214E2146A0EFC91BCEB9340C5877789517ED2967A3DFC6DD6E5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>7f83e566-596f-41d4-a26e-d480d2a04e7b_1.0.0.0_x86__9h8mbvb9erqx6</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>7f83e566-596f-41d4-a26e-d480d2a04e7b_9h8mbvb9erqx6!App</RegisteredUserModeAppID>
     <RegisteredPackageID>7f83e566-596f-41d4-a26e-d480d2a04e7b</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-14T11:12:52.927</Modified>
+      <Modified>2017-05-14T14:00:21.160</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Draw.UWP.exe">
       <PackagePath>entrypoint\Draw.UWP.exe</PackagePath>
-      <Modified>2017-05-14T11:12:52.310</Modified>
+      <Modified>2017-05-14T14:00:19.904</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -515,6 +515,101 @@
       <PackagePath>330x192.png</PackagePath>
       <Modified>2017-05-14T09:44:51.987</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.632</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.652</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.673</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.696</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.733</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.327</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.346</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.366</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.407</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.433</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.452</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.470</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.511</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.843</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.878</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-14T11:16:41.896</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\back.png">
       <PackagePath>back.png</PackagePath>
       <Modified>2017-05-14T08:59:09.795</Modified>
@@ -542,82 +637,82 @@
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.055</Modified>
+      <Modified>2017-05-14T11:16:42.028</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.057</Modified>
+      <Modified>2017-05-14T11:16:42.048</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.058</Modified>
+      <Modified>2017-05-14T11:16:42.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.059</Modified>
+      <Modified>2017-05-14T11:16:42.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.060</Modified>
+      <Modified>2017-05-14T11:16:42.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.061</Modified>
+      <Modified>2017-05-14T11:16:41.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.063</Modified>
+      <Modified>2017-05-14T11:16:41.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.064</Modified>
+      <Modified>2017-05-14T11:16:41.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.066</Modified>
+      <Modified>2017-05-14T11:16:41.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.067</Modified>
+      <Modified>2017-05-14T11:16:41.805</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.068</Modified>
+      <Modified>2017-05-14T11:16:41.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-16_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.070</Modified>
+      <Modified>2017-05-14T11:16:41.935</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.071</Modified>
+      <Modified>2017-05-14T11:16:41.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-32_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.074</Modified>
+      <Modified>2017-05-14T11:16:41.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-48_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.075</Modified>
+      <Modified>2017-05-14T11:16:41.988</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Square44x44Logo.targetsize-256_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.072</Modified>
+      <Modified>2017-05-14T11:16:42.009</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
@@ -627,27 +722,27 @@
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.077</Modified>
+      <Modified>2017-05-14T11:16:41.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.079</Modified>
+      <Modified>2017-05-14T11:16:41.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.080</Modified>
+      <Modified>2017-05-14T11:16:41.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.082</Modified>
+      <Modified>2017-05-14T11:16:41.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T11:02:12.083</Modified>
+      <Modified>2017-05-14T11:16:41.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\sponsorzy.png">
       <PackagePath>sponsorzy.png</PackagePath>
@@ -676,11 +771,11 @@
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-14T10:29:09.218</Modified>
+      <Modified>2017-05-14T14:00:20.793</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Core\Draw.UWP.exe">
       <PackagePath>Draw.UWP.exe</PackagePath>
-      <Modified>2017-05-14T11:12:52.923</Modified>
+      <Modified>2017-05-14T14:00:21.157</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
