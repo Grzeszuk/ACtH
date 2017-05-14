@@ -216,7 +216,4 @@ C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\
 C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Plugin.MediaManager.Abstractions.dll
-C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Plugin.MediaManager.dll
-C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Plugin.MediaManager.pdb
-C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Debug\Draw.UWP.csproj.GenerateResource.Cache
+C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\ak47_clipout.wav

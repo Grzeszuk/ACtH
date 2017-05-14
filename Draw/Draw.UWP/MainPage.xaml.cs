@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -15,11 +16,12 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Draw.UWP
 {
-    public sealed partial class MainPage
+    public sealed partial class MainPage 
     {
         public MainPage()
         {
             this.InitializeComponent();
+            Theme.Accent = (Color)Application.Current.Resources["SystemAccentColor"];
 
             LoadApplication(new Draw.App());
         }

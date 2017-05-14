@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Main Page\DrawPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Randomize Controller\RandomController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Teams Class\Teams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">

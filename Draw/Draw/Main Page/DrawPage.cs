@@ -1,11 +1,15 @@
-﻿using Plugin.MediaManager;
-using Plugin.MediaManager.Abstractions.Enums;
-using Plugin.MediaManager.Abstractions.Implementations;
+﻿using Draw;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.UI.Xaml.Media;
 using Xamarin.Forms;
 
 namespace AWP.Draw
@@ -21,10 +25,14 @@ namespace AWP.Draw
         private readonly ScrollView scrollPanel;
         private readonly Grid grid;
         private readonly Teams.Teams teams;
+        private readonly List<string> matches;
+        private readonly Color theme;
 
         public DrawPage()
         {
             teams = new Teams.Teams();
+            matches = new List<string>();
+
             text = new Label()
             {
                 Text = "Zacznij losowanie",
@@ -52,11 +60,12 @@ namespace AWP.Draw
             };
 
             grid = new Grid()
-            {              
+            {
+               
                 Children =
                 {
                     scrollPanel,
-                    new BoxView(){WidthRequest = 5,HeightRequest = 200,Color = Color.Crimson,HorizontalOptions = LayoutOptions.Center,VerticalOptions = LayoutOptions.Start},              
+                    new BoxView(){WidthRequest = 5,HeightRequest = 200,Color = Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A),HorizontalOptions = LayoutOptions.Center,VerticalOptions = LayoutOptions.Start},              
                 }
             };
 
@@ -65,7 +74,7 @@ namespace AWP.Draw
                 Text = "Losuj",
                 HeightRequest = 50,
                 Margin = new Thickness(350,0,350,0),
-                BackgroundColor = Color.Crimson,
+                BackgroundColor = Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A),
                 TextColor = Color.White,
             };
 
@@ -132,24 +141,13 @@ namespace AWP.Draw
             };
         }
 
-        private void DrawMethod(object sender, EventArgs e)
+        private async void DrawMethod(object sender, EventArgs e)
         {
-            Sound();
             var rng = new Random();
-            scrollPanel.ScrollToAsync(
+            await scrollPanel.ScrollToAsync(
             rng.Next(Convert.ToInt32((teamsPanel.Children.Count*200)/2), Convert.ToInt32(teamsPanel.Children.Count*200)), 0, true);
-            Stop();
         }
 
-        public void Sound()
-        {
-           CrossMediaManager.Current.Play("http://s1.vocaroo.com/media/download_temp/Vocaroo_s1JtneWwrbRn.mp3");
-        }
-
-        public void Stop()
-        {
-          CrossMediaManager.Current.Pause();
-        }
         public void AddTeams()
         {
             var tempList = new List<Grid>();
@@ -219,7 +217,7 @@ namespace AWP.Draw
                 text.IsVisible = false;
                 grid.IsVisible = false;
                 underStack.IsVisible = false;
-                group2.Children.Add(new Button() { Text = teamsList[0], TextColor = Color.White, BackgroundColor = Color.Crimson });
+                group2.Children.Add(new Button() { Text = teamsList[0], TextColor = Color.White, BackgroundColor = Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A), });
                 AddTable();
             }
         }
@@ -229,11 +227,11 @@ namespace AWP.Draw
 
             if (group2.Children.Count < group1.Children.Count)
             {
-                group2.Children.Add(new Button() { Text = temp.Text, TextColor = Color.White, BackgroundColor = Color.Crimson });
+                group2.Children.Add(new Button() { Text = temp.Text, TextColor = Color.White, BackgroundColor = Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A), });
             }
             else
             {
-                group1.Children.Add(new Button() { Text = temp.Text, TextColor = Color.White, BackgroundColor = Color.Crimson });
+                group1.Children.Add(new Button() { Text = temp.Text, TextColor = Color.White, BackgroundColor = Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A), });
             }
 
             teams.RemoveTeam((temp.Text));
@@ -289,8 +287,42 @@ namespace AWP.Draw
                 }
             };
 
+            var saveButton = new Button()
+            {
+                Text = "Zapisz wyniki",
+                TextColor = Color.White,
+                BackgroundColor = Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A),
+            };
+
+            saveButton.Clicked += SaveResult;
+
+            Table.Children.Add(saveButton);
             groupStack.Children.Add(Table);
-          
+        }
+
+        private async void SaveResult(object sender, EventArgs e)
+        {
+            var sb = new StringBuilder();
+            matches.ForEach(x => sb.AppendLine(x));
+
+            var dataPackage = new DataPackage();
+            dataPackage.SetText(sb.ToString());
+            Clipboard.SetContent(dataPackage);
+
+            try
+            {
+                FileOpenPicker picker = new FileOpenPicker()
+                {
+                    SuggestedStartLocation = PickerLocationId.DocumentsLibrary,
+                    ViewMode = PickerViewMode.List,
+                };
+                picker.FileTypeFilter.Add(".txt");
+
+                StorageFile result = await picker.PickSingleFileAsync();
+                await FileIO.AppendTextAsync(result, sb.ToString());
+
+            }
+            catch { }
         }
 
         private StackLayout AddMatch(int team1, int team2,char group,string time)
@@ -309,17 +341,18 @@ namespace AWP.Draw
                 temp2 = (Button)group2.Children[team2];
             }
 
+            matches.Add($"{temp1.Text} vs {temp2.Text} godzina: {time}");
+
             return new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
                 Children =
                 {
-                   new Button(){Text=temp1.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                   new Button(){Text=temp1.Text,TextColor=Color.White,BackgroundColor=Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A),WidthRequest=200},
                    new Button(){Text="vs",TextColor=Color.DimGray,BackgroundColor=Color.White,WidthRequest=40},
-                   new Button(){Text=temp2.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                   new Button(){Text=temp2.Text,TextColor=Color.White,BackgroundColor = Color.FromRgba(Theme.Accent.R, Theme.Accent.G, Theme.Accent.B, Theme.Accent.A),WidthRequest=200},
                    new Button(){Text = $"Dzień: 19 maja, Godzina: {time}",TextColor=Color.White,WidthRequest=250},
                 }
-
             }; 
         }
     }

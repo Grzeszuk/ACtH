@@ -70,12 +70,6 @@
     <AppxPackagedFile Include="C:\Users\brand\.nuget\packages\Microsoft.VisualBasic\10.0.1\lib\netcore50\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brand\.nuget\packages\Plugin.MediaManager\0.4.0\lib\uap10.0\Plugin.MediaManager.Abstractions.dll">
-      <PackagePath>Plugin.MediaManager.Abstractions.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\brand\.nuget\packages\Plugin.MediaManager\0.4.0\lib\uap10.0\Plugin.MediaManager.dll">
-      <PackagePath>Plugin.MediaManager.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\.nuget\packages\runtime.any.System.Collections\4.0.11\lib\netcore50\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
     </AppxPackagedFile>
@@ -575,6 +569,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\sponsorzy.png">
       <PackagePath>sponsorzy.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\ak47_clipout.mp3">
+      <PackagePath>ak47_clipout.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\ak47_clipout.wav">
+      <PackagePath>ak47_clipout.wav</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
