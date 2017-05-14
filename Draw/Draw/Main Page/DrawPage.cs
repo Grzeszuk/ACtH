@@ -9,10 +9,13 @@ namespace AWP.Draw
     public class DrawPage : ContentPage
     {
         private readonly StackLayout teamsPanel;
+        private readonly StackLayout underStack;
+        private readonly StackLayout group1;
+        private readonly StackLayout group2;
         private readonly ScrollView scrollPanel;
         private readonly Grid grid;
         private readonly Teams.Teams teams;
-
+   
         public DrawPage()
         {
             teams = new Teams.Teams();
@@ -52,9 +55,9 @@ namespace AWP.Draw
                 TextColor = Color.White,
             };
 
-            var underStack = new StackLayout()
+            underStack = new StackLayout()
             {
-                BackgroundColor = Color.White,
+                BackgroundColor = Color.DarkGray,
                 Children =
                 {
                     drawButton,
@@ -63,12 +66,41 @@ namespace AWP.Draw
 
             drawButton.Clicked += DrawMethod;
 
+            group1 = new StackLayout()
+            {
+                Margin = new Thickness(5,0,0,0),
+                Children =
+                {
+                    new Label(){Text="Grupa 1",TextColor = Color.White,FontSize = 50}
+                }
+            };
+
+            group2 = new StackLayout()
+            {
+                Margin = new Thickness(40,0,0,0),
+                Children =
+                {
+                    new Label(){Text="Grupa 2",TextColor = Color.White,FontSize = 50}
+                }
+            };
+
+            var groupStack = new StackLayout()
+            {
+                Orientation = StackOrientation.Horizontal,
+                Children =
+                {
+                    group1,group2
+                }
+            };
+
             Content = new StackLayout()
             {
                 Children =
                 {
                     grid,
                     underStack,
+                    groupStack,
+                    new Image(){Source = "sponsorzy.png",VerticalOptions = LayoutOptions.EndAndExpand,HorizontalOptions = LayoutOptions.Center,Margin = new Thickness(3,3,3,3)},
                 }
             };
         }
@@ -131,14 +163,9 @@ namespace AWP.Draw
             }
             else
             {
-                teamsPanel.Children.Add(new Label()
-                {
-                    Text = "Wszystkie drużyny zostały wybrane",
-                    TextColor = Color.White,
-                    VerticalOptions = LayoutOptions.Center,
-                    HorizontalOptions = LayoutOptions.Center,
-                    FontSize = 50
-                });
+                underStack.IsVisible = false;
+                teamsPanel.IsVisible = false;
+                addLastTeam(teamsList[0]);
                 grid.Children.RemoveAt(1);
             }
         }
@@ -148,6 +175,20 @@ namespace AWP.Draw
             teams.RemoveTeam((temp.Text));
             AddTeams();
             scrollPanel.ScrollToAsync(0, 0, false);
+
+            if (group2.Children.Count < group1.Children.Count)
+            {
+                group2.Children.Add(new Button(){Text = temp.Text,TextColor = Color.White,BackgroundColor = Color.Crimson});
+            }
+            else
+            {
+                group1.Children.Add(new Button() { Text = temp.Text, TextColor = Color.White, BackgroundColor = Color.Crimson });
+            }
+        }
+
+        private void addLastTeam(string text)
+        {
+            group2.Children.Add(new Button() { Text = text, TextColor = Color.White, BackgroundColor = Color.Crimson });
         }
     }
 }

@@ -21,7 +21,7 @@ namespace AWP.Teams
                 "Thriller Makers",
                 "Szybka Sklejka",
                 "1stCav Junior 2",
-                "Pszyńskie Dziki",
+                "Pszczyńskie Dziki",
             };
         }
         public List<string> getTeams()
