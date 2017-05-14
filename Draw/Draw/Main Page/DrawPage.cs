@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Plugin.MediaManager;
+using Plugin.MediaManager.Abstractions.Enums;
+using Plugin.MediaManager.Abstractions.Implementations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AWP.Draw
@@ -21,7 +25,6 @@ namespace AWP.Draw
         public DrawPage()
         {
             teams = new Teams.Teams();
-
             text = new Label()
             {
                 Text = "Zacznij losowanie",
@@ -49,8 +52,7 @@ namespace AWP.Draw
             };
 
             grid = new Grid()
-            {
-               
+            {              
                 Children =
                 {
                     scrollPanel,
@@ -132,11 +134,22 @@ namespace AWP.Draw
 
         private void DrawMethod(object sender, EventArgs e)
         {
+            Sound();
             var rng = new Random();
             scrollPanel.ScrollToAsync(
-                rng.Next(Convert.ToInt32((teamsPanel.Children.Count*200)/2), Convert.ToInt32(teamsPanel.Children.Count*200)), 0, true);
+            rng.Next(Convert.ToInt32((teamsPanel.Children.Count*200)/2), Convert.ToInt32(teamsPanel.Children.Count*200)), 0, true);
+            Stop();
         }
 
+        public void Sound()
+        {
+           CrossMediaManager.Current.Play("http://s1.vocaroo.com/media/download_temp/Vocaroo_s1JtneWwrbRn.mp3");
+        }
+
+        public void Stop()
+        {
+          CrossMediaManager.Current.Pause();
+        }
         public void AddTeams()
         {
             var tempList = new List<Grid>();
@@ -149,7 +162,7 @@ namespace AWP.Draw
             {
                 groupStack.IsVisible = true;
 
-                text.Margin = new Thickness(100, 0, 0, 0);
+                text.Margin = new Thickness(40, 0, 0, 0);
                 text.FontSize = 48;
                 text.VerticalOptions = LayoutOptions.CenterAndExpand;
                 text.Text = "Po wylosowaniu wszystkich \ndrużyn nautomatycznie zostanie \nrozpisana kolejność meczy";
@@ -233,6 +246,7 @@ namespace AWP.Draw
 
             groupStack.HorizontalOptions = LayoutOptions.CenterAndExpand;
             groupStack.VerticalOptions = LayoutOptions.StartAndExpand;
+            groupStack.Margin = new Thickness(10,0,0,0);
 
             var Match = new StackLayout();
 
@@ -267,7 +281,7 @@ namespace AWP.Draw
 
             var Table = new StackLayout()
             {
-                Margin = new Thickness(100, 0, 0, 0),
+                Margin = new Thickness(40, 0, 0, 0),
                 Children =
                 {
                    new Label(){Text="Rozpisane mecze:",TextColor = Color.White,FontSize = 50},
@@ -297,22 +311,16 @@ namespace AWP.Draw
 
             return new StackLayout()
             {
+                Orientation = StackOrientation.Horizontal,
                 Children =
                 {
-                   new StackLayout()
-                        {
-                            Orientation= StackOrientation.Horizontal,
-                            Children=
-                            {
-                                new Button(){Text=temp1.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
-                                new Button(){Text="vs",TextColor=Color.DimGray,BackgroundColor=Color.White,WidthRequest=40},
-                                new Button(){Text=temp2.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
-                            }
-                        },
-                        new Button(){Text = $"Dzień: 19 maja, Godzina: {time}",TextColor=Color.White},
+                   new Button(){Text=temp1.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                   new Button(){Text="vs",TextColor=Color.DimGray,BackgroundColor=Color.White,WidthRequest=40},
+                   new Button(){Text=temp2.Text,TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                   new Button(){Text = $"Dzień: 19 maja, Godzina: {time}",TextColor=Color.White,WidthRequest=250},
                 }
 
-            };          
+            }; 
         }
     }
 }
