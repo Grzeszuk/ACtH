@@ -10,28 +10,39 @@ namespace AWP.Draw
     {
         private readonly StackLayout teamsPanel;
         private readonly StackLayout underStack;
+        private readonly StackLayout groupStack;
         private readonly StackLayout group1;
         private readonly StackLayout group2;
+        private readonly Label text;
         private readonly ScrollView scrollPanel;
         private readonly Grid grid;
         private readonly Teams.Teams teams;
-   
+
         public DrawPage()
         {
             teams = new Teams.Teams();
+
+            text = new Label()
+            {
+                Text = "Zacznij losowanie",
+                TextColor = Color.White,
+                FontSize=70,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+            };
 
             teamsPanel = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
                 HeightRequest = 200,
             };
-
+      
             AddTeams();
 
             scrollPanel = new ScrollView()
             {
                 Orientation = ScrollOrientation.Horizontal,
-                BackgroundColor = Color.DimGray,
+                BackgroundColor = Color.White,
                 HeightRequest = 200,
                 Content = teamsPanel,
                 Margin = new Thickness(0,3,0,0),
@@ -39,6 +50,7 @@ namespace AWP.Draw
 
             grid = new Grid()
             {
+               
                 Children =
                 {
                     scrollPanel,
@@ -50,14 +62,14 @@ namespace AWP.Draw
             {
                 Text = "Losuj",
                 HeightRequest = 50,
-                Margin = new Thickness(250,0,250,0),
+                Margin = new Thickness(350,0,350,0),
                 BackgroundColor = Color.Crimson,
                 TextColor = Color.White,
             };
 
             underStack = new StackLayout()
             {
-                BackgroundColor = Color.DarkGray,
+                BackgroundColor = Color.White,
                 Children =
                 {
                     drawButton,
@@ -71,7 +83,7 @@ namespace AWP.Draw
                 Margin = new Thickness(5,0,0,0),
                 Children =
                 {
-                    new Label(){Text="Grupa 1",TextColor = Color.White,FontSize = 50}
+                    new Label(){Text="Grupa 1:",TextColor = Color.White,FontSize = 50}
                 }
             };
 
@@ -80,16 +92,30 @@ namespace AWP.Draw
                 Margin = new Thickness(40,0,0,0),
                 Children =
                 {
-                    new Label(){Text="Grupa 2",TextColor = Color.White,FontSize = 50}
+                    new Label(){Text="Grupa 2:",TextColor = Color.White,FontSize = 50}
                 }
             };
 
-            var groupStack = new StackLayout()
+            groupStack = new StackLayout()
             {
+                IsVisible = false,
                 Orientation = StackOrientation.Horizontal,
+                VerticalOptions = LayoutOptions.Center,
                 Children =
                 {
                     group1,group2
+                }
+            };
+
+            var resultStack = new StackLayout()
+            {
+                BackgroundColor = Color.FromHex("#2c2c2c"),
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                Children =
+                {
+                     text,
+                     groupStack,
+                     new Image(){Source="sponsorzy.png",VerticalOptions = LayoutOptions.EndAndExpand,HorizontalOptions=LayoutOptions.Center,Margin=new Thickness(0,0,0,5)},
                 }
             };
 
@@ -99,8 +125,7 @@ namespace AWP.Draw
                 {
                     grid,
                     underStack,
-                    groupStack,
-                    new Image(){Source = "sponsorzy.png",VerticalOptions = LayoutOptions.EndAndExpand,HorizontalOptions = LayoutOptions.Center,Margin = new Thickness(3,3,3,3)},
+                    resultStack,
                 }
             };
         }
@@ -120,6 +145,17 @@ namespace AWP.Draw
 
             teamsPanel.Children.Clear();
 
+            if(teamsList.Count==9)
+            {
+                groupStack.IsVisible = true;
+
+                text.Margin = new Thickness(100, 0, 0, 0);
+                text.FontSize = 48;
+                text.VerticalOptions = LayoutOptions.CenterAndExpand;
+                text.Text = "Po wylosowaniu wszystkich \ndrużyn nautomatycznie zostanie \nrozpisana kolejność meczy";
+
+                groupStack.Children.Add(text);
+            }
 
             if (teamsList.Count > 1)
             {
@@ -134,16 +170,19 @@ namespace AWP.Draw
                             HeightRequest = 200,
                             Text = team,
                             TextColor = Color.White,
+                            FontAttributes = FontAttributes.Bold,
+                            BackgroundColor = Color.FromHex("#90000000"),
                         };
 
                         teamButton.Clicked += TeamClicked;
 
                         tempButton = new Grid()
                         {
+                            
                             WidthRequest = 200,
                             HeightRequest = 200,
                             Margin = new Thickness(0, 0, 3, 0),
-                            BackgroundColor = Color.White,
+                            BackgroundColor = Color.DimGray,
 
                             Children =
                             {
@@ -161,12 +200,14 @@ namespace AWP.Draw
                     teamsPanel.Children.Add(team);
                 }
             }
-            else
+            else 
             {
+                Title = "Wyniki losowania:";
+                text.IsVisible = false;
+                grid.IsVisible = false;
                 underStack.IsVisible = false;
-                teamsPanel.IsVisible = false;
-                addLastTeam(teamsList[0]);
-                grid.Children.RemoveAt(1);
+                group2.Children.Add(new Button() { Text = teamsList[0], TextColor = Color.White, BackgroundColor = Color.Crimson });
+                AddTable();
             }
         }
         private void TeamClicked(object sender, EventArgs e)
@@ -186,9 +227,53 @@ namespace AWP.Draw
             }
         }
 
-        private void addLastTeam(string text)
+        private void AddTable()
         {
-            group2.Children.Add(new Button() { Text = text, TextColor = Color.White, BackgroundColor = Color.Crimson });
+
+            groupStack.HorizontalOptions = LayoutOptions.CenterAndExpand;
+            groupStack.VerticalOptions = LayoutOptions.CenterAndExpand;
+
+            var Match = new StackLayout();
+
+
+            for (var x = 0; x < 10; x++)
+            {
+                Match.Children.Add(new StackLayout()
+                {
+                    Children =
+                    {
+                        new StackLayout()
+                        {
+                            Orientation= StackOrientation.Horizontal,
+                            Children=
+                            {
+                                new Button(){Text="Drużyna 1",TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                                new Button(){Text="vs",TextColor=Color.DimGray,BackgroundColor=Color.White,WidthRequest=40},
+                                new Button(){Text="Drużyna 2",TextColor=Color.White,BackgroundColor=Color.Crimson,WidthRequest=200},
+                            }
+                        },
+                        new Button(){Text = "Sala: 412, Dzień: 19 maja, Godzina: 12:30",TextColor=Color.White},
+                    }
+                });
+            }
+
+            var Matches = new ScrollView()
+            {
+                Content = Match
+            };
+
+            var Table = new StackLayout()
+            {
+                Margin = new Thickness(100, 0, 0, 0),
+                Children =
+                {
+                   new Label(){Text="Rozpisane mecze:",TextColor = Color.White,FontSize = 50},
+                   Matches,
+                }
+            };
+
+            groupStack.Children.Add(Table);
+          
         }
     }
 }

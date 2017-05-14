@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-14T09:01:46.485</Modified>
+      <Modified>2017-05-14T11:12:52.927</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Draw.UWP.exe">
       <PackagePath>entrypoint\Draw.UWP.exe</PackagePath>
-      <Modified>2017-05-14T09:01:45.849</Modified>
+      <Modified>2017-05-14T11:12:52.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -513,7 +513,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\330x192.png">
       <PackagePath>330x192.png</PackagePath>
-      <Modified>2017-05-10T11:03:14.793</Modified>
+      <Modified>2017-05-14T09:44:51.987</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\back.png">
       <PackagePath>back.png</PackagePath>
@@ -651,7 +651,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\sponsorzy.png">
       <PackagePath>sponsorzy.png</PackagePath>
-      <Modified>2017-05-14T08:11:13.613</Modified>
+      <Modified>2017-05-14T10:11:14.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -676,11 +676,11 @@
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-14T08:59:51.789</Modified>
+      <Modified>2017-05-14T10:29:09.218</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Debug\Core\Draw.UWP.exe">
       <PackagePath>Draw.UWP.exe</PackagePath>
-      <Modified>2017-05-14T09:01:46.483</Modified>
+      <Modified>2017-05-14T11:12:52.923</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

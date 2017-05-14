@@ -13,7 +13,7 @@ namespace Draw
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new DrawPage(){Title = "Losowanie Drużyn:",BackgroundColor = Color.DimGray});
+			MainPage = new NavigationPage(new DrawPage(){Title = "Losowanie Drużyn:",BackgroundColor = Color.White});
 		}
 
 		protected override void OnStart ()
