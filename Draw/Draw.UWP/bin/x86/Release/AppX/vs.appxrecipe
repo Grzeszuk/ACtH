@@ -31,7 +31,7 @@
     <AppXManifest Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-15T10:04:25.818</Modified>
+      <Modified>2017-05-15T10:38:05.414</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -282,15 +282,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Draw.UWP.dll">
       <PackagePath>Draw.UWP.dll</PackagePath>
-      <Modified>2017-05-15T10:04:24.843</Modified>
+      <Modified>2017-05-15T10:38:04.421</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Draw.UWP.exe">
       <PackagePath>Draw.UWP.exe</PackagePath>
-      <Modified>2017-05-15T10:04:25.787</Modified>
+      <Modified>2017-05-15T10:38:05.384</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Draw.UWP.pdb">
       <PackagePath>Draw.UWP.pdb</PackagePath>
-      <Modified>2017-05-15T10:04:25.786</Modified>
+      <Modified>2017-05-15T10:38:05.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
@@ -303,11 +303,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\_Resources\0.rsrc">
       <PackagePath>_Resources\0.rsrc</PackagePath>
-      <Modified>2017-05-15T10:03:49.861</Modified>
+      <Modified>2017-05-15T10:37:30.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\_Resources\index.txt">
       <PackagePath>_Resources\index.txt</PackagePath>
-      <Modified>2017-05-15T10:03:49.861</Modified>
+      <Modified>2017-05-15T10:37:30.808</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

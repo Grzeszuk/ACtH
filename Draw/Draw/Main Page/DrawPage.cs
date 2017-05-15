@@ -329,19 +329,8 @@ namespace AWP.Draw
 
         private StackLayout AddMatch(int team1, int team2,char group,string time)
         {
-            Button temp1;
-            Button temp2;
-
-            if (group=='a')
-            {
-                temp1 = (Button)_group1.Children[team1];
-                temp2 = (Button)_group1.Children[team2];
-            }
-            else
-            {
-                temp1 = (Button)_group2.Children[team1];
-                temp2 = (Button)_group2.Children[team2];
-            }
+            var temp1 = group == 'a' ? (Button) _group1.Children[team1] : (Button) _group2.Children[team1];
+            var temp2 = group == 'a' ? (Button) _group1.Children[team2] : (Button) _group2.Children[team2];
 
             _matches.Add($"{temp1.Text} vs {temp2.Text} godzina: {time}");
 
