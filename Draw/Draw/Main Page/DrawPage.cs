@@ -16,6 +16,7 @@ namespace AWP.Draw
 {
     public class DrawPage : ContentPage
     {
+        #region Variables
         private readonly StackLayout _teamsPanel;
         private readonly StackLayout _underStack;
         private readonly StackLayout _groupStack;
@@ -26,8 +27,7 @@ namespace AWP.Draw
         private readonly Grid _grid;
         private readonly Teams.Teams _teams;
         private readonly List<string> _matches;
-        private readonly Color theme;
-   
+        #endregion
         public DrawPage()
         {
             _teams = new Teams.Teams();
@@ -140,14 +140,12 @@ namespace AWP.Draw
                 }
             };
         }
-
         private async void DrawMethod(object sender, EventArgs e)
         {
             var rng = new Random();
             await _scrollPanel.ScrollToAsync(
             rng.Next(Convert.ToInt32((_teamsPanel.Children.Count*200)/2), Convert.ToInt32(_teamsPanel.Children.Count*200)), 0, true);
         }
-
         public void AddTeams()
         {
             var tempList = new List<Grid>();
@@ -238,7 +236,6 @@ namespace AWP.Draw
             AddTeams();
             await _scrollPanel.ScrollToAsync(0, 0, false);
         }
-
         private void AddTable()
         {
             _groupStack.HorizontalOptions = LayoutOptions.CenterAndExpand;
@@ -294,11 +291,9 @@ namespace AWP.Draw
             };
 
             saveButton.Clicked += SaveResult;
-
             table.Children.Add(saveButton);
             _groupStack.Children.Add(table);
         }
-
         private async void SaveResult(object sender, EventArgs e)
         {
              var sb = new StringBuilder();
@@ -319,14 +314,12 @@ namespace AWP.Draw
 
                 var result = await picker.PickSingleFileAsync();
                 await FileIO.AppendTextAsync(result, sb.ToString());
-
             }
             catch
             {
               await DisplayAlert("Losowanie drużyn - Error", "Bład przy zapisie danych", "OK");
             };
         }
-
         private StackLayout AddMatch(int team1, int team2,char group,string time)
         {
             var temp1 = group == 'a' ? (Button) _group1.Children[team1] : (Button) _group2.Children[team1];
