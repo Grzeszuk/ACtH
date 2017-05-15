@@ -506,3 +506,4 @@ C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\
 C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Release\ilc\intermediate\SgGenerated\System.Runtime.Serialization.Generated.pdb
 C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll
 C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll.ILTransformTask.repro
+C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\obj\x86\Release\Draw.UWP.csprojResolveAssemblyReference.cache

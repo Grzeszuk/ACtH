@@ -22,7 +22,6 @@ namespace Draw.UWP
         {
             this.InitializeComponent();
             Theme.Accent = (Color)Application.Current.Resources["SystemAccentColor"];
-
             LoadApplication(new Draw.App());
         }
     }
