@@ -27,7 +27,7 @@ namespace AWP.Draw
         private readonly Teams.Teams _teams;
         private readonly List<string> _matches;
         private readonly Color theme;
-
+   
         public DrawPage()
         {
             _teams = new Teams.Teams();
@@ -221,7 +221,7 @@ namespace AWP.Draw
                 AddTable();
             }
         }
-        private void TeamClicked(object sender, EventArgs e)
+        private async void TeamClicked(object sender, EventArgs e)
         {
             var temp = (Button)sender;
 
@@ -236,54 +236,53 @@ namespace AWP.Draw
 
             _teams.RemoveTeam((temp.Text));
             AddTeams();
-            _scrollPanel.ScrollToAsync(0, 0, false);
+            await _scrollPanel.ScrollToAsync(0, 0, false);
         }
 
         private void AddTable()
         {
-
             _groupStack.HorizontalOptions = LayoutOptions.CenterAndExpand;
             _groupStack.VerticalOptions = LayoutOptions.StartAndExpand;
             _groupStack.Margin = new Thickness(10,0,0,0);
 
-            var Match = new StackLayout();
+            var match = new StackLayout();
 
-            Match.Children.Add(new Label() { Text = "Grupa A:", TextColor = Color.White, FontSize = 24 });
-            Match.Children.Add(AddMatch(2, 5, 'a', "8:30"));
-            Match.Children.Add(AddMatch(4, 3, 'a', "8:30"));
-            Match.Children.Add(AddMatch(5, 1, 'a', "9:30"));
-            Match.Children.Add(AddMatch(3, 2, 'a', "9:30"));
-            Match.Children.Add(AddMatch(1, 4, 'a', "10:30"));
-            Match.Children.Add(AddMatch(5, 3, 'a', "10:30"));
-            Match.Children.Add(AddMatch(3, 1, 'a', "11:30"));
-            Match.Children.Add(AddMatch(2, 4, 'a', "11:30"));
-            Match.Children.Add(AddMatch(1, 2, 'a', "12:30"));
-            Match.Children.Add(AddMatch(4, 5, 'a', "12:30"));
+            match.Children.Add(new Label() { Text = "Grupa A:", TextColor = Color.White, FontSize = 24 });
+            match.Children.Add(AddMatch(2, 5, 'a', "8:30"));
+            match.Children.Add(AddMatch(4, 3, 'a', "8:30"));
+            match.Children.Add(AddMatch(5, 1, 'a', "9:30"));
+            match.Children.Add(AddMatch(3, 2, 'a', "9:30"));
+            match.Children.Add(AddMatch(1, 4, 'a', "10:30"));
+            match.Children.Add(AddMatch(5, 3, 'a', "10:30"));
+            match.Children.Add(AddMatch(3, 1, 'a', "11:30"));
+            match.Children.Add(AddMatch(2, 4, 'a', "11:30"));
+            match.Children.Add(AddMatch(1, 2, 'a', "12:30"));
+            match.Children.Add(AddMatch(4, 5, 'a', "12:30"));
 
-            Match.Children.Add(new Label() { Text = "Grupa B:", TextColor = Color.White, FontSize = 24 });
-            Match.Children.Add(AddMatch(2, 5, 'b', "14:00"));
-            Match.Children.Add(AddMatch(4, 3, 'b', "14:00"));
-            Match.Children.Add(AddMatch(5, 1, 'b', "15:00"));
-            Match.Children.Add(AddMatch(3, 2, 'b', "15:00"));
-            Match.Children.Add(AddMatch(1, 4, 'b', "16:00"));
-            Match.Children.Add(AddMatch(5, 3, 'b', "16:00"));
-            Match.Children.Add(AddMatch(3, 1, 'b', "17:00"));
-            Match.Children.Add(AddMatch(2, 4, 'b', "17:00"));
-            Match.Children.Add(AddMatch(1, 2, 'b', "18:00"));
-            Match.Children.Add(AddMatch(4, 5, 'b', "18:00"));
+            match.Children.Add(new Label() { Text = "Grupa B:", TextColor = Color.White, FontSize = 24 });
+            match.Children.Add(AddMatch(2, 5, 'b', "14:00"));
+            match.Children.Add(AddMatch(4, 3, 'b', "14:00"));
+            match.Children.Add(AddMatch(5, 1, 'b', "15:00"));
+            match.Children.Add(AddMatch(3, 2, 'b', "15:00"));
+            match.Children.Add(AddMatch(1, 4, 'b', "16:00"));
+            match.Children.Add(AddMatch(5, 3, 'b', "16:00"));
+            match.Children.Add(AddMatch(3, 1, 'b', "17:00"));
+            match.Children.Add(AddMatch(2, 4, 'b', "17:00"));
+            match.Children.Add(AddMatch(1, 2, 'b', "18:00"));
+            match.Children.Add(AddMatch(4, 5, 'b', "18:00"));
 
-            var Matches = new ScrollView()
+            var matches = new ScrollView()
             {
-                Content = Match
+                Content = match
             };
 
-            var Table = new StackLayout()
+            var table = new StackLayout()
             {
                 Margin = new Thickness(40, 0, 0, 0),
                 Children =
                 {
                    new Label(){Text="Rozpisane mecze:",TextColor = Color.White,FontSize = 50},
-                   Matches,
+                   matches,
                 }
             };
 
@@ -296,14 +295,14 @@ namespace AWP.Draw
 
             saveButton.Clicked += SaveResult;
 
-            Table.Children.Add(saveButton);
-            _groupStack.Children.Add(Table);
+            table.Children.Add(saveButton);
+            _groupStack.Children.Add(table);
         }
 
         private async void SaveResult(object sender, EventArgs e)
         {
-            var sb = new StringBuilder();
-            _matches.ForEach(x => sb.AppendLine(x));
+             var sb = new StringBuilder();
+            _matches?.ForEach(x => sb.AppendLine(x));
 
             var dataPackage = new DataPackage();
             dataPackage.SetText(sb.ToString());
@@ -311,24 +310,27 @@ namespace AWP.Draw
 
             try
             {
-                FileOpenPicker picker = new FileOpenPicker()
+                var picker = new FileOpenPicker()
                 {
                     SuggestedStartLocation = PickerLocationId.DocumentsLibrary,
                     ViewMode = PickerViewMode.List,
                 };
                 picker.FileTypeFilter.Add(".txt");
 
-                StorageFile result = await picker.PickSingleFileAsync();
+                var result = await picker.PickSingleFileAsync();
                 await FileIO.AppendTextAsync(result, sb.ToString());
 
             }
-            catch { }
+            catch
+            {
+              await DisplayAlert("Losowanie drużyn - Error", "Bład przy zapisie danych", "OK");
+            };
         }
 
         private StackLayout AddMatch(int team1, int team2,char group,string time)
         {
-            var temp1 = new Button();
-            var temp2 = new Button();
+            Button temp1;
+            Button temp2;
 
             if (group=='a')
             {
