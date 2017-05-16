@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="7f83e566-596f-41d4-a26e-d480d2a04e7b" Publisher="CN=Dawid Grzeszuk TwoNoobs Team" Version="1.0.7.0" ProcessorArchitecture="x86" />
+  <Identity Name="7f83e566-596f-41d4-a26e-d480d2a04e7b" Publisher="CN=Dawid Grzeszuk TwoNoobs Team" Version="1.0.9.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="f736c883-f105-4d30-a719-4bf328872f5e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Turniej CS-GO Loswanie drużyn</DisplayName>

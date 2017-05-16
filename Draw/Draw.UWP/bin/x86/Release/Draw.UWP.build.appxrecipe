@@ -34,6 +34,21 @@
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\ak47_clipout.wav">
       <PackagePath>ak47_clipout.wav</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -191,6 +206,26 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x86\Release\ilc\Assets\Wide310x150Logo.scale-100.png">
