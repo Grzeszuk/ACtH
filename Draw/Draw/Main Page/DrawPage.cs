@@ -305,20 +305,18 @@ namespace AWP.Draw
 
             try
             {
-                var picker = new FileOpenPicker()
+                var picker = new FileSavePicker()
                 {
                     SuggestedStartLocation = PickerLocationId.DocumentsLibrary,
-                    ViewMode = PickerViewMode.List,
+                    SuggestedFileName = "Zapis"
                 };
-                picker.FileTypeFilter.Add(".txt");
+                picker.FileTypeChoices.Add("Normalny plik tekstowy UTF-8", new List<string>() { ".txt" });
 
-                var result = await picker.PickSingleFileAsync();
+                var result = await picker.PickSaveFileAsync();
                 await FileIO.AppendTextAsync(result, sb.ToString());
+                await Windows.Storage.CachedFileManager.CompleteUpdatesAsync(result);
             }
-            catch
-            {
-              await DisplayAlert("Losowanie drużyn - Error", "Bład przy zapisie danych", "OK");
-            };
+            catch {};
         }
         private StackLayout AddMatch(int team1, int team2,char group,string time)
         {

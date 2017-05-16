@@ -8,5 +8,11 @@
     <LargeTileSource>C:\Users\brand\Documents\Visual Studio 2017\Projects\Draw\Draw\Draw.UWP\yOZKs2D-1024x595.png</LargeTileSource>
     <AppIconSource>C:\Users\brand\Documents\Visual Studio 2017\Projects\Draw\Draw\Draw.UWP\yOZKs2D-1024x595.png</AppIconSource>
     <SplashScreenSource>C:\Users\brand\Documents\Visual Studio 2017\Projects\Draw\Draw\Draw.UWP\yOZKs2D-1024x595.png</SplashScreenSource>
+    <AppxPackageIsForStore>False</AppxPackageIsForStore>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <BadgeLogoSource>C:\Users\brand\Documents\Visual Studio 2017\Projects\Draw\Draw\Draw.UWP\yOZKs2D-1024x595.png</BadgeLogoSource>
+    <PackageLogoSource>C:\Users\brand\Documents\Visual Studio 2017\Projects\Draw\Draw\Draw.UWP\yOZKs2D-1024x595.png</PackageLogoSource>
   </PropertyGroup>
 </Project>

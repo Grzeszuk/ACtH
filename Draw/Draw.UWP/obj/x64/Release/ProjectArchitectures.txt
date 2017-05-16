@@ -1,0 +1,1 @@
+C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\Draw.UWP.csproj;x64

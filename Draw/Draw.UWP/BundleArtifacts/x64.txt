@@ -1,0 +1,6 @@
+MainPackage=C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x64\Release\Draw.UWP_1.0.7.0_x64.appx
+SymbolPackage=C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\AppPackages\Draw.UWP_1.0.7.0_Test\Draw.UWP_1.0.7.0_x64.appxsym
+ResourcePack=C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x64\Release\Draw.UWP_1.0.7.0_scale-100.appx
+ResourcePack=C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x64\Release\Draw.UWP_1.0.7.0_scale-125.appx
+ResourcePack=C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x64\Release\Draw.UWP_1.0.7.0_scale-150.appx
+ResourcePack=C:\Users\brand\documents\visual studio 2017\Projects\Draw\Draw\Draw.UWP\bin\x64\Release\Draw.UWP_1.0.7.0_scale-400.appx
